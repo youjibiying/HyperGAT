@@ -33,6 +33,8 @@ def Generate_LDA(dataset):
 	doc_content_list = []
 	doc_sentence_list = []
 	f = open('data/' + dataset + '_corpus.txt', 'rb')
+	# import nltk
+	# nltk.download('punkt')
 	for line in f.readlines():
 	    doc_content_list.append(line.strip().decode('latin1'))
 	    doc_sentence_list.append(tokenize.sent_tokenize(clean_str_simple_version(doc_content_list[-1], dataset)))
